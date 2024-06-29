@@ -27,7 +27,28 @@
         </v-toolbar>
 
         <v-navigation-drawer app class="indigo" v-model="drawer" color="indigo-accent-2">
-            
+            <v-list>
+                
+                <v-list-subheader>Plain Variant</v-list-subheader>
+                    <v-divider
+                    ></v-divider>
+
+                    <v-list-item
+                        v-for="(item, i) in links"
+                        :key="i"
+                        :value="item"
+                        color="primary"
+                        variant="plain"
+                        :to="item.route"
+                        nav
+                    >
+                        <template v-slot:prepend>
+                        <v-icon :icon="item.icon"></v-icon>
+                        </template>
+
+                        <v-list-item-title v-text="item.text"></v-list-item-title>
+                    </v-list-item>
+            </v-list>
         </v-navigation-drawer>
     </nav>
 </template>
@@ -37,8 +58,17 @@
         name: 'VNavbar',
         data(){
             return{
-                drawer: false
+                drawer: false,
+                links:[
+                    {icon:'mdi-home', text: 'Home', route: '/'},
+                    {icon:'mdi-account-tie', text: 'About me', route: '/about'},
+                    {icon:'mdi-folder-google-drive', text: 'Projects', route: '/projects'},
+                    {icon:'mdi-card-account-mail', text: 'Contact me', route: '/contact'},
+                ],
             }
+        },
+        methods:{
+            
         }
     }
 </script>
