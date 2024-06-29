@@ -1,14 +1,17 @@
 <template>
-  <div class="home">
-    <h1>Home page</h1>    
+  <div class="main">
+    <h1 class="main-title">Homepage</h1>
+    <v-container fluid class="home mt-4"> 
+   
+    </v-container>
   </div>
 </template>
 
 <script>
-
+  
 export default{
   name: 'HomeView',
 
-  components: { },
+  components: {  },
 };
 </script>

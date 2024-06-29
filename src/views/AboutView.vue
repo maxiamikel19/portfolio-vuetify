@@ -1,6 +1,9 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="main">
+    <h1 class="main-title">About me</h1>
+    <v-container fluid class="home mt-4"> 
+      
+    </v-container>
   </div>
 </template>
 
@@ -13,3 +16,5 @@
 <style scoped>
 
 </style>
+
+
